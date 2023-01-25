@@ -1,0 +1,7 @@
+.heading{
+    font-weight: 700;
+    color: var(--clr-neutral-200);
+    font-size: 36px;
+    line-height: 54px;
+    text-transform: uppercase;
+}

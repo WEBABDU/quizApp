@@ -1,0 +1,62 @@
+.scores__table {
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 450px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scores__table::-webkit-scrollbar {
+  display: none;
+}
+
+.scores__table-head {
+  position: sticky;
+  top: -30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: var(--clr-neutral-100);
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.scores__table-content {
+  margin-top: 16px;
+  width: 100%;
+}
+
+.scores__table-stat {
+  width: 100%;
+  padding-left: 10px;
+  /* border-bottom: 1px solid #d9d9d9; */
+  padding-bottom: 5px;
+}
+
+.count {
+  color: var(--clr-wrong);
+}
+
+.count,
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  color: var(--clr-correct);
+}
+
+.username {
+  color: #1d355d;
+}
+
+.count > span,
+.score > span,
+.username > span {
+  color: #000;
+  font-weight: 700;
+}
