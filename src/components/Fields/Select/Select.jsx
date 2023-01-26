@@ -1,6 +1,7 @@
 import React from "react";
 import ReactSelect from "react-select";
-import { ControlLabel } from "../../common/ControlLabel";
+
+import { ControlLabel } from "components/common";
 
 import "./Select.css";
 

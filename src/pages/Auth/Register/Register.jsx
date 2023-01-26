@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../../../components/Button/Button";
-import { Input } from "../../../components/Fields/Input/Input";
-import { PageHeading } from "../../../components/PageHeading/PageHeading";
-import { authActions } from "../../../store/actions/auth";
+
+import { Button, Fields, PageHeading } from "components";
+import { authActions } from "store/actions";
+
+import screen from "assets/images/screen.svg"
 
 import "./Register.css";
 
@@ -29,32 +30,32 @@ export const Register = () => {
 
   return (
     <div className="register__wrapper">
-      <div className="row">
+      <div>
         <PageHeading text="Register" />
         <div className="register | flow">
           <div className="register__image">
             <img
-              src={require("./../../../assets/images/screen.svg").default}
+              src={screen}
               alt=""
             />
           </div>
           <div className="form-container">
             <form action="#" className="form | flow">
-              <Input
+              <Fields.Input
                 type="text"
                 placeholder="Type username"
                 label="Username"
                 inputProps={{ name: "username" }}
                 onChange={handleChange}
               />
-              <Input
+              <Fields.Input
                 type="email"
                 placeholder="Type email"
                 label="Email"
                 inputProps={{ name: "email" }}
                 onChange={handleChange}
               />
-              <Input
+              <Fields.Input
                 type="password"
                 placeholder="Type password"
                 label="Password"

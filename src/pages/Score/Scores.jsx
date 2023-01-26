@@ -1,10 +1,8 @@
-import React from "react";
-import { useEffect } from "react";
-
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { PageHeading } from "../../components/PageHeading/PageHeading";
-import { ScoreTable } from "../../components/ScoreTable/ScoreTable";
-import { statisticsActions } from "../../store/actions";
+
+import { PageHeading, ScoreTable } from "components";
+import { statisticsActions } from "store/actions";
 
 import "./Scores.css";
 

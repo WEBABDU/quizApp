@@ -1,4 +1,4 @@
-import { settingsActions } from "../actions";
+import { settingsActions } from "store/actions";
 
 const initialState = {
   category: ["general_knowledge"],

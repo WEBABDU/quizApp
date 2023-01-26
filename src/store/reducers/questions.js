@@ -1,4 +1,4 @@
-import { questionsActions } from "../actions/questions";
+import { questionsActions } from "store/actions";
 
 const initialState = {
   questions: null,

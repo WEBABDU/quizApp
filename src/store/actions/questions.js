@@ -1,15 +1,10 @@
 import {
-  collection,
   doc,
   getDoc,
-  setDoc,
   updateDoc,
 } from "firebase/firestore/lite";
-import { db } from "../../firebase";
-
-import { functions } from "../../services/functions";
-
-const { QuestionsAPI } = require("../../services/api");
+import { functions, QuestionsAPI } from "services";
+import { db } from "./../../firebase";
 
 const SUCCESS = "QUESTIONS_SUCCESS";
 const FAILURE = "QUESTIONS_FAILURE";

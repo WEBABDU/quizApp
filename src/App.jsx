@@ -2,15 +2,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
-import { MainLayout } from "./layouts";
-import { Login } from "./pages/Auth/Login/Login";
-import { authActions } from "./store/actions/auth";
-import { Spinner } from "./components/Spinner/Spinner";
-import { Home } from "./pages/Home/Home";
-import { Quiz } from "./pages/Quiz/Quiz";
-import { Register } from "./pages/Auth/Register/Register";
-import { Scores } from "./pages/Score/Scores";
-import { Leaders } from "./pages/Leader/Leaders";
+import { Home, Leaders, Login, Quiz, Register, Scores } from "pages";
+import { Spinner } from "components";
+import { MainLayout } from "layouts";
+import { authActions } from "store/actions";
+
 
 const App = () => {
   const isAuth = useSelector((state) => state.auth.isAuth);

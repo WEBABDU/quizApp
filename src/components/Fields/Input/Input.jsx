@@ -1,5 +1,6 @@
 import React from "react";
-import { ControlLabel } from "../../common/ControlLabel";
+
+import { ControlLabel } from "components/common";
 
 import "./Input.css";
 

@@ -1,13 +1,10 @@
-import React from "react";
-import { useState } from "react";
+import React,{ useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../components/Button/Button";
 
-import { Input } from "../../components/Fields/Input/Input";
-import { Select } from "../../components/Fields/Select/Select";
-import { PageHeading } from "../../components/PageHeading/PageHeading";
-import { settingsActions } from "../../store/actions";
+import { Button, Fields, PageHeading } from "components";
+import { settingsActions } from "store/actions";
+
 import { data } from "./data";
 import "./Home.css";
 
@@ -37,7 +34,7 @@ export const Home = () => {
         <PageHeading text="Home" />
         <div className="home">
           <div className="flow">
-            <Select
+            <Fields.Select
               options={categoryOptions}
               onChange={setCategory}
               isMulti
@@ -46,7 +43,7 @@ export const Home = () => {
               value={category}
               label="Primary category of each question (1 per question)"
             />
-            <Select
+            <Fields.Select
               options={difficultyOptions}
               name="difficulty"
               value={difficulty}
@@ -54,7 +51,7 @@ export const Home = () => {
               label="Easy, medium or hard"
               placeholder="Difficulty"
             />
-            <Input
+            <Fields.Input
               type="number"
               placeholder="Limit"
               label="Number of questions to return"

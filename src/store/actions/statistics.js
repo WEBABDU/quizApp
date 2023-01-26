@@ -5,7 +5,7 @@ import {
   getDocs,
   query,
 } from "firebase/firestore/lite";
-import { db } from "../../firebase";
+import { db } from "./../../firebase";
 
 const SUCCESS = "STATISTICS_SUCCESS";
 const FAILURE = "STATISTICS_FAILURE";

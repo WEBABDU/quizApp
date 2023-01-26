@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../../../components/Button/Button";
 
-import { Input } from "../../../components/Fields/Input/Input";
-import { PageHeading } from "../../../components/PageHeading/PageHeading";
-import { authActions } from "../../../store/actions/auth";
+import { Button, Fields, PageHeading } from "components";
+import { authActions } from "store/actions";
+
+import screen from "assets/images/screen.svg";
 
 import "./Login.css";
 
@@ -19,7 +18,6 @@ export const Login = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-
   const signIn = (event) => {
     event.preventDefault();
     dispatch(authActions.loginUserThunk(formData, navigate));
@@ -28,25 +26,22 @@ export const Login = () => {
   return (
     <>
       <div className="login__wrapper">
-        <div className="row">
+        <div>
           <PageHeading text="Login" />
           <div className="login | flow">
             <div className="login__image">
-              <img
-                src={require("./../../../assets/images/screen.svg").default}
-                alt=""
-              />
+              <img src={screen} alt="" />
             </div>
             <div className="form-container">
               <form action="#" className="form | flow">
-                <Input
+                <Fields.Input
                   type="email"
                   placeholder="Type email"
                   inputProps={{ name: "email" }}
                   onChange={handleChange}
                   label="Email"
                 />
-                <Input
+                <Fields.Input
                   type="password"
                   placeholder="Type password"
                   inputProps={{ name: "password" }}
@@ -61,8 +56,8 @@ export const Login = () => {
                     style={{ width: "100%" }}
                   />
                 </div>
-                  <span className="form__link"> 
-                    Don't have a account? <Link to="/register">Sign up</Link>
+                <span className="form__link">
+                  Don't have a account? <Link to="/register">Sign up</Link>
                 </span>
               </form>
             </div>

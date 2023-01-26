@@ -1,18 +1,17 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Answer } from "../../components/Answer/Answer";
-import { Button } from "../../components/Button/Button";
-import { Result } from "../../components/Result/Result";
-import { Spinner } from "../../components/Spinner/Spinner";
-import { questionsActions } from "../../store/actions/questions";
+
+import { Answer, Button, Result, Spinner } from "components";
+import { questionsActions } from "store/actions";
 
 import "./Quiz.css";
+
+
 
 export const Quiz = () => {
   const dispatch = useDispatch();
   const settings = useSelector((state) => state.settings);
-  const user = useSelector(state => state.auth.user);
+  const user = useSelector((state) => state.auth.user);
   const {
     questions,
     loading,

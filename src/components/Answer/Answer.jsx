@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ReactComponent as CheckIcon } from "./../../assets/images/check.svg";
-import { ReactComponent as WrongIcon } from "./../../assets/images/wrong.svg";
+import { ReactComponent as CheckIcon } from "assets/images/check.svg";
+import { ReactComponent as WrongIcon } from "assets/images/wrong.svg";
 
 import "./Answer.css";
 
@@ -31,7 +31,7 @@ export const Answer = ({
         {isCorrectAnswer && (
           <CheckIcon fill="#fff" width="20px" height="20px" />
         )}
-        {isWrongAnswer && <WrongIcon fill="#fff" width="20px" height="20px"/>}
+        {isWrongAnswer && <WrongIcon fill="#fff" width="20px" height="20px" />}
       </span>
     </button>
   );

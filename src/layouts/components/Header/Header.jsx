@@ -2,9 +2,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Button } from "../../components/Button/Button";
-import { authActions } from "../../store/actions/auth";
-import { data } from "./../data";
+import { Button } from "../../../components/Button/Button";
+import { authActions } from "../../../store/actions/auth";
+import { data } from "../../data";
 
 import "./Header.css";
 
