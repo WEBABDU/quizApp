@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://quizapp-a275d.web.app/">
+    <a href="https://quizapp-a275d.web.app/" target="_blank">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/WEBABDU/quizApp">
+    <a href="https://github.com/WEBABDU/quizApp" target="_blank">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8">
+    <a href="https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8" target="_blank">
       Challenge
     </a>
   </h3>
