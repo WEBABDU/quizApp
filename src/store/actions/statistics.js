@@ -5,13 +5,13 @@ import {
   getDocs,
   query,
 } from "firebase/firestore/lite";
-import { db } from "./../../firebase";
+import { functions } from "services";
+import { db } from "firebase-config";
 
 const SUCCESS = "STATISTICS_SUCCESS";
 const FAILURE = "STATISTICS_FAILURE";
 const PENDING = "STATISTICS_PENDING";
 const LEADER_STATISTICS_SUCCESS = "LEADER_STATISTICS_SUCCESS";
-
 
 const pending = () => ({ type: PENDING });
 
@@ -19,7 +19,10 @@ const success = (payload) => ({ type: SUCCESS, payload });
 
 const failure = (payload) => ({ type: FAILURE, payload });
 
-const leaderSucces = (payload) => ({type: LEADER_STATISTICS_SUCCESS, payload})
+const leaderSucces = (payload) => ({
+  type: LEADER_STATISTICS_SUCCESS,
+  payload,
+});
 
 const getStatsticsThunk = (userId) => async (dispatch) => {
   dispatch(pending());
@@ -54,7 +57,11 @@ const getLeaderThunk = () => async (dispatch) => {
       }));
       payload.push(...arr);
     });
-    dispatch(leaderSucces(payload))
+
+    const sortedPayload = functions.sortObjArrayByKey(payload, "score").reverse();
+
+
+    dispatch(leaderSucces(sortedPayload));
   } catch (error) {
     dispatch(failure(error.message));
   }

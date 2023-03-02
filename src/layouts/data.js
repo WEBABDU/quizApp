@@ -19,11 +19,6 @@ const links = [
     to: "/leader",
     label: "Leaders",
   },
-  {
-    end: false,
-    to: "/settings",
-    label: "Settings",
-  },
 ];
 
 

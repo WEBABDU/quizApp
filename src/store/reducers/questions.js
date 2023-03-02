@@ -78,6 +78,17 @@ export const questionsReducer = (state = initialState, action) => {
         loading: false 
       };
     }
+
+    case questionsActions.NEW_QUESTION: {
+      return {
+        ...state,
+        currentQuestionIndex: 0,
+        currentAnswer: "",
+        showResults: false,
+        score: 0,       
+        loading: false 
+      };
+    }
     default:
       return state;
   }

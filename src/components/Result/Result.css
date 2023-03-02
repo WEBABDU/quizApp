@@ -45,3 +45,10 @@
   border-radius: 12px;
   cursor: pointer;
 }
+
+.result__btns{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}

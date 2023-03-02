@@ -1,8 +1,9 @@
+import { Button } from "components/Button/Button";
 import React from "react";
 
 import "./Result.css";
 
-export const Result = ({ score, tryAgain }) => {
+export const Result = ({ score, tryAgain, newQuestion }) => {
   return (
     <div className="result | flow">
       <div className="result__image">
@@ -17,7 +18,10 @@ export const Result = ({ score, tryAgain }) => {
         You got <span>{score}</span> correct answers
       </p>
 
-      <button className="result__button" onClick={tryAgain}>Try again</button>
+      <div className="result__btns">
+        <Button innerText="Try again" onClick={tryAgain} variant="login"/>
+        <Button innerText="New quiz" onClick={newQuestion} variant="register"/>
+      </div>
     </div>
   );
 };

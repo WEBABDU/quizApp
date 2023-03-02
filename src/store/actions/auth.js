@@ -7,7 +7,7 @@ import {
   signOut,
   auth,
   db,
-} from "./../../firebase";
+} from "firebase-config";
 
 const SUCCESS = "AUTH_SUCCESS";
 const FAILURE = "AUTH_FAILURE";

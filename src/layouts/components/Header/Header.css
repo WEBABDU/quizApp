@@ -1,55 +1,96 @@
-.header{
-    margin-top: 20px;
+.header {
+  margin-top: 20px;
 }
 
-.header__wrapper{
-    display: flex;
-    justify-content: space-between;
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo{
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 24px;
-    color: var(--clr-neutral-200);;
+.logo {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--clr-neutral-200);
 }
 
-.nav{
-    display: flex;
-    align-items: center;
+.nav {
+  display: flex;
+  align-items: center;
 }
 
-.nav__list{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-right: 50px;
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-right: 50px;
 }
 
-.nav__list-link{
-    position: relative;
-    text-decoration: none;
-    color: var(--clr-neutral-100);
+.nav__list-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--clr-neutral-100);
 }
 
-.nav__list-link::after{
-    content: "";
+.nav__list-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background-color: var(--clr-neutral-100);
+  transition: transform var(--transition);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.nav__list-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.hamburger-btn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-image: url("assets/images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  background-color: transparent;
+  display: none;
+}
+
+@media only screen and (max-width: 786px) {
+  .nav__list {
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
+    z-index: 30;
+  }
+
+  .hamburger-btn.active {
+    background-image: url("assets/images/icon-close.svg");
+  }
+
+  .nav__list.active {
     position: absolute;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    background-color: var(--clr-neutral-100);
-    transition: transform var(--transition);
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-.nav__list-link:hover::after{
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.active{
-    font-weight: bold;
+    display: flex;
+    inset: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #5256a1;
+    z-index: 20;
+    gap: 20px;
+  }
 }

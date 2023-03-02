@@ -12,7 +12,18 @@ export const MainLayout = () => {
           <Outlet />
         </div>
       </main>
-      <footer className="footer">created by username - devChallenges.io</footer>
+      <footer className="footer clr-neutral-100">
+        <p>
+          created by{" "}
+          <a
+            className="clr-neutral-100"
+            href="https://github.com/WEBABDU/devChelages-quzzApp"
+          >
+            WEBABDU
+          </a>{" "}
+          - devChallenges.io
+        </p>
+      </footer>
     </>
   );
 };
