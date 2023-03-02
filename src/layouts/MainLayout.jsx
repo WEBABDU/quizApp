@@ -15,10 +15,7 @@ export const MainLayout = () => {
       <footer className="footer clr-neutral-100">
         <p>
           created by{" "}
-          <a
-            className="clr-neutral-100"
-            href="https://github.com/WEBABDU/devChelages-quzzApp"
-          >
+          <a className="clr-neutral-100" href="https://github.com/WEBABDU">
             WEBABDU
           </a>{" "}
           - devChallenges.io
